@@ -15,6 +15,7 @@ import com.github.SzaboSzebasztian1.inputlib.InputPanel;
 import com.github.SzaboSzebasztian1.inputlib.TitlePanel;
 
 import javafx.geometry.Pos;
+import javafx.scene.control.Label;
 import javafx.scene.layout.VBox;
 
 public class MainPanel extends VBox{
@@ -24,6 +25,7 @@ public class MainPanel extends VBox{
     InputPanel heightPanel;
     ButtonPanel buttonPanel;
     InputPanel volumePanel;
+    Label aboutLabel;
 
     public MainPanel() {
         this.initComponent();
@@ -39,6 +41,7 @@ public class MainPanel extends VBox{
         this.heightPanel = new InputPanel();
         this.buttonPanel = new ButtonPanel();
         this.volumePanel = new InputPanel();
+        this.aboutLabel = new Label();
     }
 
     private void setComponent(){
@@ -48,6 +51,7 @@ public class MainPanel extends VBox{
         this.heightPanel.setText("Magasság: ");
         this.buttonPanel.setCalcButtonText("Számít");
         this.volumePanel.setText("Terület: ");
+        this.aboutLabel.setText("Szabó Szebasztián, Szoft I-1-N, 2023-04-03");
 
     }
     
@@ -58,6 +62,7 @@ public class MainPanel extends VBox{
         this.getChildren().add(this.heightPanel);
         this.getChildren().add(this.buttonPanel);
         this.getChildren().add(this.volumePanel);
+        this.getChildren().add(this.aboutLabel);
     }
 
     private void setMainPanel(){
